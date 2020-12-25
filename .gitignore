@@ -1,0 +1,11 @@
+*.iml
+target/
+.idea/
+.bsp/
+.bloop/
+.metals/
+.settings/
+/git.properties
+/src/main/resources/git.properties
+project/target/
+project/project/
