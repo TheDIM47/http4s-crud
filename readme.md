@@ -1,6 +1,6 @@
 ## http4s CRUD for Devices DB with Cats, Doobie, Circe
 
-Cats v2.3.1, Circe v0.8.0, Doobie v0.9.4, Http4s v0.21.14
+Cats v2.3, Circe v0.8, Doobie v0.10, Http4s v0.21
 
 ### Configuration
 
