@@ -1,0 +1,13 @@
+{
+  "resources": [
+    {
+      "pattern": ".*conf$"
+    },
+    {
+      "pattern": ".*sql$"
+    },
+    {
+      "pattern": ".*xml$"
+    }
+  ]
+}

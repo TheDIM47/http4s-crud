@@ -5,9 +5,30 @@ ThisBuild / scalaVersion := "2.13.4"
 ThisBuild / semanticdbEnabled := true
 ThisBuild / semanticdbVersion := V.SemanticDbVersion
 
-addCompilerPlugin("org.typelevel" % "kind-projector_2.13.4" % "0.11.2")
+addCompilerPlugin("org.typelevel" % "kind-projector_2.13.4" % "0.11.3")
 addCompilerPlugin("org.scalameta" % "semanticdb-scalac"  % V.SemanticDbVersion cross CrossVersion.full)
 addCompilerPlugin("com.olegpy"   %% "better-monadic-for" % "0.3.1")
+
+enablePlugins(NativeImagePlugin)
+
+Compile / mainClass := Some("com.juliasoft.crud.Main")
+
+nativeImageVersion := "20.3.0"
+nativeImageInstalled := true
+nativeImageGraalHome := file("/opt/graalvm-ce-java11-20.3.0").toPath
+nativeImageOptions ++= List(
+  "-H:+AddAllCharsets",
+  "-H:ResourceConfigurationFiles=../../src/main/resources/resources-config.json",
+  "--no-fallback",
+  "--allow-incomplete-classpath",
+  "--enable-http",
+  "--enable-https",
+  "--initialize-at-build-time",
+  "--initialize-at-run-time=com.typesafe.config.impl.ConfigImpl$EnvVariablesHolder",
+  "--initialize-at-run-time=com.typesafe.config.impl.ConfigImpl$SystemPropertiesHolder",
+  "--initialize-at-run-time=io.netty.buffer.PooledByteBufAllocator",
+  "--initialize-at-run-time=org.h2.store.fs.FileNioMemData"
+)
 
 libraryDependencies ++= Seq(
   "org.http4s"        %% "http4s-blaze-server" % V.Http4sVersion,
@@ -22,7 +43,7 @@ libraryDependencies ++= Seq(
   "io.circe"          %% "circe-core"          % V.CirceVersion,
   "io.circe"          %% "circe-generic"       % V.CirceVersion,
   "io.circe"          %% "circe-config"        % V.CirceConfigVersion,
-  "org.scalameta"     %% "svm-subs"            % V.GraalVMVersion,
+  "org.scalameta"      % "svm-subs"            % V.SVMVersion,
   "com.h2database"     % "h2"                  % V.H2Version            % Test,
   "org.tpolecat"      %% "doobie-scalatest"    % V.DoobieVersion        % Test,
   "org.scalatest"     %% "scalatest"           % V.ScalatestVersion     % Test,
