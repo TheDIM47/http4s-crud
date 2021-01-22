@@ -1,4 +1,4 @@
-## http4s CRUD for Devices DB with Cats, Doobie, Circe
+## Build GraalVM native image with http4s server (CRUD application)
 
 Cats v2.3, Circe v0.8, Doobie v0.10, Http4s v0.21
 
