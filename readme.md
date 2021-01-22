@@ -2,6 +2,10 @@
 
 Cats v2.3, Circe v0.8, Doobie v0.10, Http4s v0.21
 
+### Native image
+
+See https://github.com/TheDIM47/http4s-crud/blob/main/native-image-readme.md
+
 ### Configuration
 
 See application.conf or use command line -Dconfig.file=path/to/config-file
