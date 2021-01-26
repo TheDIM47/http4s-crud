@@ -13,9 +13,9 @@ enablePlugins(NativeImagePlugin)
 
 Compile / mainClass := Some("com.juliasoft.crud.Main")
 
-nativeImageVersion := "20.3.0"
+nativeImageVersion := "21.0.0"
 nativeImageInstalled := true
-nativeImageGraalHome := file("/opt/graalvm-ce-java11-20.3.0").toPath
+nativeImageGraalHome := file("/opt/graalvm-ce-java11-21.0.0").toPath
 nativeImageOptions ++= List(
   "-H:+AddAllCharsets",
   "-H:ResourceConfigurationFiles=../../src/main/resources/resources-config.json",
