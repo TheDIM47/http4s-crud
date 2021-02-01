@@ -5,6 +5,10 @@ Change following settings in build.sbt
 nativeImageInstalled := true
 nativeImageGraalHome := file("/opt/graalvm-ce-java11-20.3.0").toPath
 ```
+or comment these lines and export GraalVM home directory as GRAALVM_HOME
+```
+$ export GRAALVM_HOME=/opt/graalvm-ce-java11-20.3.0
+```
 and then, simple
 ```shell
 sbt nativeImage
