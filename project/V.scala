@@ -9,5 +9,5 @@ object V {
   val LogbackVersion       = "1.2.3"
   val ScalatestPlusVersion = "3.2.3.0"
   val ScalatestVersion     = "3.2.3"
-  val SemanticDbVersion    = "4.4.7"
+  val SemanticDbVersion    = "4.4.8"
 }
