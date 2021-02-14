@@ -5,7 +5,7 @@ object V {
   val DoobieVersion        = "0.10.0"
   val SVMVersion           = "101.0.0"
   val H2Version            = "1.4.200"
-  val Http4sVersion        = "0.21.18"
+  val Http4sVersion        = "0.21.19"
   val LogbackVersion       = "1.2.3"
   val ScalatestPlusVersion = "3.2.3.0"
   val ScalatestVersion     = "3.2.3"
