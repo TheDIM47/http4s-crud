@@ -13,9 +13,10 @@ enablePlugins(NativeImagePlugin)
 
 Compile / mainClass := Some("com.juliasoft.crud.Main")
 
-nativeImageVersion := "21.0.0"
-nativeImageInstalled := true
-nativeImageGraalHome := file("/opt/graalvm-ce-java11-21.0.0").toPath
+// nativeImageVersion := "21.0.0"
+// nativeImageGraalHome := file("/opt/graalvm-ce-java11-21.0.0").toPath
+// nativeImageInstalled := true
+
 nativeImageOptions ++= List(
   "-H:+AddAllCharsets",
   "-H:ResourceConfigurationFiles=../../src/main/resources/resources-config.json",
@@ -36,7 +37,7 @@ libraryDependencies ++= Seq(
   "org.http4s"        %% "http4s-circe"        % V.Http4sVersion,
   "org.http4s"        %% "http4s-dsl"          % V.Http4sVersion,
   "org.typelevel"     %% "cats-core"           % V.CatsVersion,
-  "org.typelevel"     %% "cats-effect"         % V.CatsVersion,
+  "org.typelevel"     %% "cats-effect"         % V.CatsEffectVersion,
   "org.tpolecat"      %% "doobie-core"         % V.DoobieVersion,
   "org.tpolecat"      %% "doobie-h2"           % V.DoobieVersion,
   "org.tpolecat"      %% "doobie-hikari"       % V.DoobieVersion,
