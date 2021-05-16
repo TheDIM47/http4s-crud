@@ -5,9 +5,9 @@ ThisBuild / scalaVersion := "2.13.5"
 ThisBuild / semanticdbEnabled := true
 ThisBuild / semanticdbVersion := V.SemanticDbVersion
 
-addCompilerPlugin("org.typelevel" % "kind-projector_2.13.5" % "0.11.3")
-addCompilerPlugin("org.scalameta" % "semanticdb-scalac"  % V.SemanticDbVersion cross CrossVersion.full)
-addCompilerPlugin("com.olegpy"   %% "better-monadic-for" % "0.3.1")
+addCompilerPlugin("org.typelevel" %% "kind-projector"     % V.kindProjector     cross CrossVersion.full)
+addCompilerPlugin("org.scalameta"  % "semanticdb-scalac"  % V.SemanticDbVersion cross CrossVersion.full)
+addCompilerPlugin("com.olegpy"    %% "better-monadic-for" % "0.3.1")
 
 enablePlugins(NativeImagePlugin)
 
