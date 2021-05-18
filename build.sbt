@@ -1,7 +1,7 @@
 name := "http4s-crud"
 ThisBuild / organization := "com.juliasoft"
 ThisBuild / version := "0.0.1-SNAPSHOT"
-ThisBuild / scalaVersion := "2.13.5"
+ThisBuild / scalaVersion := "2.13.6"
 ThisBuild / semanticdbEnabled := true
 ThisBuild / semanticdbVersion := V.SemanticDbVersion
 
